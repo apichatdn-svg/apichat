@@ -1,0 +1,417 @@
+Gemini
+About GeminiOpens in a new window
+Gemini AppOpens in a new window
+SubscriptionsOpens in a new window
+For BusinessOpens in a new window
+Conversation with Gemini
+สร้างการ์ดประวัติส่วนตัวนักเรียนเป็น HTML ไฟล์เดียว (self-contained)
+
+โดยใช้ข้อมูลต่อไปนี้:
+
+
+
+ชื่อ: [ชื่อ-นามสกุล]
+
+ชื่อเล่น: [ชื่อเล่น]
+
+วันเกิด: [วันเดือนปี]
+
+เพศ: [ชาย/หญิง]
+
+กรุ๊ปเลือด: [A/B/O/AB]
+
+ราศี: [ราศี]
+
+ภูมิลำเนา: [จังหวัด]
+
+ส่วนสูง: [ซม.]
+
+วิชาที่ชอบ: [วิชา]
+
+วิชาที่ยาก: [วิชา]
+
+เพื่อนสนิท: [ชื่อ]
+
+ชมรม/กิจกรรม: [ชมรม]
+
+ความฝัน/อาชีพ: [อาชีพ]
+
+อาหารโปรด: [อาหาร]
+
+สีโปรด: [สี]
+
+งานอดิเรก: [งานอดิเรก]
+
+กีฬา: [กีฬา]
+
+เพลงที่ชอบ: [แนวเพลง]
+
+ซีรีส์/อนิเมะ: [ชื่อ]
+
+ทักษะ: [ทักษะ 1, ทักษะ 2, ทักษะ 3]
+
+คติประจำใจ: "[คติ]"
+
+โรงเรียน: [ชื่อโรงเรียน]
+
+ระดับชั้น: [ม.X]
+
+
+
+ดีไซน์: modern card, clean, สีฟ้าเป็นหลัก, แบ่ง section ชัดเจน,
+
+แสดงทักษะเป็น pill/tag, มีคติประจำใจ, 
+
+Your HTML file is ready
+HTML icon
+ student_card 
+ HTML 
+
+ฉันได้สร้างไฟล์ HTML สำหรับการ์ดประวัติส่วนตัวนักเรียน (Student Profile Card) เรียบร้อยแล้ว โดยออกแบบให้เป็นแบบ Modern & Clean ใช้โทนสีฟ้าเป็นหลัก (ตามที่คุณกำหนด) และเป็นไฟล์เดียวแบบ Self-contained ที่คุณสามารถนำไปเปิดบนเบราว์เซอร์หรือนำไปแก้ไขข้อมูลในวงเล็บ [...] ได้ทันทีครับ
+
+รายละเอียดการดีไซน์:
+Modern Card Layout: ตัวการ์ดมีขอบมน (Rounded corners) และมีเงา (Shadow) นุ่มนวลสไตล์มินิมอล ช่วยให้การ์ดดูลอยเด่นขึ้นมาจากพื้นหลัง
+
+Blue Theme Color: ใช้เทคนิคไล่เฉดสี (Gradient) จากฟ้าสดใสไปยังน้ำเงินเข้มในส่วนหัวการ์ด (Header) และใช้สีฟ้าอ่อน (Soft Blue) สำหรับจุดเน้น (Accents) เช่น พื้นหลังข้อความคติประจำใจ
+
+Structured Sections: แบ่งสัดส่วนข้อมูลชัดเจนด้วยเส้นคั่นและไอคอน:
+
+ข้อมูลทั่วไป: แสดงผลในรูปแบบตารางกริด (Grid) 2 คอลัมน์ อ่านง่าย สบายตา
+
+การเรียน & กิจกรรม และ ไลฟ์สไตล์: จัดเรียงแบบรายการเดี่ยว ขวา-ซ้าย ชัดเจน
+
+Pill/Tag Skills: ส่วนของทักษะถูกจัดกลุ่มในรูปแบบของ "Tag" ทรงแคปซูลสีฟ้าอ่อน และมีเอฟเฟกต์ตอบสนองเมื่อนำเมาส์ไปชี้ (Hover Effect)
+
+Motto Box: ช่องคำคม/คติประจำใจเด่นชัดบริเวณด้านบนของเนื้อหาการ์ด
+
+วิธีใช้งาน:
+คุณสามารถดาวน์โหลดไฟล์ student_card.html ไปแล้วใช้โปรแกรม Text Editor (เช่น Notepad, VS Code) เพื่อเปลี่ยนข้อความในเครื่องหมายวงเล็บเหลี่ยม เช่น [ชื่อ-นามสกุล], [คติประจำใจ], [ทักษะ 1] ให้เป็นข้อมูลจริงได้เลยครับ
+
+
+
+
+
+Gemini is AI and can make mistakes.
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การ์ดประวัติส่วนตัวนักเรียน</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --primary-dark: #1d4ed8;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-card: #ffffff;
+            --bg-page: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .student-card {
+            background: var(--bg-card);
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Header Accent */
+        .card-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            padding: 30px 24px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .avatar-container {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 3px solid white;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar-placeholder {
+            font-size: 42px;
+        }
+
+        .student-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .student-school {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .student-class {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 24px;
+        }
+
+        /* Motto Section */
+        .motto-section {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 24px;
+            font-style: italic;
+            color: var(--primary-dark);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 4px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            padding: 8px 12px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .info-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Full Width List Info */
+        .full-info-list {
+            margin-bottom: 24px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-label {
+            color: var(--text-muted);
+        }
+
+        .list-value {
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: right;
+        }
+
+        /* Skills/Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="student-card">
+        <!-- Header Section -->
+        <div class="card-header">
+            <div class="avatar-container">
+                <span class="avatar-placeholder">🎓</span>
+            </div>
+            <h1 class="student-name">[ชื่อ-นามสกุล] ([ชื่อเล่น])</h1>
+            <div class="student-school">[ชื่อโรงเรียน]</div>
+            <div class="student-class">ชั้น ม.[X]</div>
+        </div>
+
+        <!-- Body Section -->
+        <div class="card-body">
+            
+            <!-- คติประจำใจ -->
+            <div class="motto-section">
+                "[คติประจำใจ]"
+            </div>
+
+            <!-- ข้อมูลทั่วไป -->
+            <div class="section-title">📌 ข้อมูลทั่วไป</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">วันเกิด</span>
+                    <span class="info-value">[วันเดือนปี]</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">เพศ / กรุ๊ปเลือด</span>
+                    <span class="info-value">[ชาย/หญิง] (Group [O])</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">ราศี</span>
+                    <span class="info-value">[ราศี]</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">ส่วนสูง</span>
+                    <span class="info-value">[ซม.] ซม.</span>
+                </div>
+                <div class="info-item" style="grid-column: span 2;">
+                    <span class="info-label">ภูมิลำเนา</span>
+                    <span class="info-value">[จังหวัด]</span>
+                </div>
+            </div>
+
+            <!-- ด้านการเรียนและกิจกรรม -->
+            <div class="section-title">📚 การเรียน & กิจกรรม</div>
+            <div class="full-info-list">
+                <div class="list-item">
+                    <span class="list-label">วิชาที่ชอบ</span>
+                    <span class="list-value">[วิชา]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">วิชาที่ยาก</span>
+                    <span class="list-value">[วิชา]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">ชมรม/กิจกรรม</span>
+                    <span class="list-value">[ชมรม]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">ความฝัน/อาชีพ</span>
+                    <span class="list-value">[อาชีพ]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">เพื่อนสนิท</span>
+                    <span class="list-value">[ชื่อเพื่อน]</span>
+                </div>
+            </div>
+
+            <!-- ไลฟ์สไตล์และความชอบ -->
+            <div class="section-title">🎨 ไลฟ์สไตล์ & ความชอบ</div>
+            <div class="full-info-list">
+                <div class="list-item">
+                    <span class="list-label">งานอดิเรก</span>
+                    <span class="list-value">[งานอดิเรก]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">กีฬา</span>
+                    <span class="list-value">[กีฬา]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">อาหารโปรด</span>
+                    <span class="list-value">[อาหาร]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">สีที่ชอบ</span>
+                    <span class="list-value">[สี]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">เพลงที่ชอบ</span>
+                    <span class="list-value">[แนวเพลง]</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-label">ซีรีส์/อนิเมะ</span>
+                    <span class="list-value">[ชื่อเรื่อง]</span>
+                </div>
+            </div>
+
+            <!-- ทักษะความสามารถ -->
+            <div class="section-title">⚡ ทักษะความสามารถ</div>
+            <div class="tags-container">
+                <span class="tag">[ทักษะ 1]</span>
+                <span class="tag">[ทักษะ 2]</span>
+                <span class="tag">[ทักษะ 3]</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+student_card.html
+Displaying student_card.html.
